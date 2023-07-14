@@ -1,5 +1,18 @@
 .legacy-message {
   margin-top: 60px;
+
+  p {
+    font: 600 normal rem(24px) / 1.4 'Circular';
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  background: linear-gradient(170.23deg, #51D8AA 0%, #5BADD9 42.93%, #8374D0 99.11%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .legacy-video {
@@ -22,4 +35,17 @@
       text-decoration: underline;
     }
   }
+}
+
+section.content {
+  margin-top: 60px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+section.title {
+  margin-top: 60px;
 }

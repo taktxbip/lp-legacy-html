@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 @import './config/variables';
+@import './config/fonts';
 
 $grid-breakpoints: (
   xs: 0,
@@ -20,7 +21,7 @@ $container-max-widths: (
 
 
 @import "~bootstrap/scss/bootstrap";
-@import './config//mixins';
+@import './config/mixins';
 // ui
 @import './ui/typography';
 // layout

@@ -4,17 +4,16 @@ h3,
 h4,
 h5,
 h6 {
-  color: get('colors.neutral.400');
+  color: $titles;
   margin-top: 0;
 }
 
-// h1 {
-// font: 900 normal rem(50px) / 1.28 get('font.family');
-// }
-
 h2 {
-  font: 700 normal rem(22px) / 1.2 get('font.family');
-  color: get('colors.neutral.400');
+  font: 400 normal rem(24px) / 1.2 var(--font-p);
+
+  +p {
+    margin-top: 7px;
+  }
 
   a {
     font: inherit;
@@ -22,16 +21,20 @@ h2 {
 }
 
 h3 {
-  font: 900 normal rem(28px) / 1.29 get('font.family');
+  font: 300 normal rem(22px) / 1.2 var(--font-p);
+
+  +p {
+    margin-top: 10px;
+  }
 }
 
 h6 {
-  font: 500 normal rem(18px) / 1.27 get('font.family');
-  margin-bottom: 4px;
+  font: 500 normal rem(18px) / 1.27 var(--font-p);
 }
 
 p {
-  font: 400 normal rem(13px) / 1.4 get('font.family');
+  font: 300 normal rem(13px) / 1.4 var(--font-p);
   color: #040404;
-  margin-bottom: 20px;
+  margin-top: rem(26px);
+  margin-bottom: 0;
 }
