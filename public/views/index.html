@@ -56,8 +56,10 @@
               <p>Although our website is no longer available, Love Property lives on through our old Instagram accounts.
               </p>
               <p>You can explore a selection below.</p>
-              <h1>Accounts</h1>
+
+              <%= _.template(require('./../includes/explore.html').default)() %>
             </section>
+            
 
             <section class="content">
               <h2>Our Product</h2>
@@ -67,7 +69,14 @@
               <p>You can view the last iteration of our product, documented on Figma by clicking the link below.</p>
               <ul class="links">
                 <li>
-                  <a href="https://tinyurl.com/jhs3ayn2"><span class="icon"></span>https://tinyurl.com/jhs3ayn2</a>
+                  <a href="https://tinyurl.com/jhs3ayn2">
+                    <span class="icon">
+                      <svg role="img" class="figma-icon">
+                        <use xlink:href="#figma-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="label">https://tinyurl.com/jhs3ayn2</span>
+                  </a>
                 </li>
               </ul>
             </section>
@@ -79,11 +88,29 @@
                 to
                 some of our favorite press features.</p>
               <ul class="links">
-                <li><a href="https://tinyurl.com/2szzymfp"><span class="icon"></span>https://tinyurl.com/2szzymfp</a>
+                <li><a href="https://tinyurl.com/2szzymfp">
+                    <span class="icon">
+                      <svg role="img" class="file-minus-icon">
+                        <use xlink:href="#file-minus-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="label">https://tinyurl.com/2szzymfp</span></a>
                 </li>
-                <li><a href="https://tinyurl.com/2p8avhwp"><span class="icon"></span>https://tinyurl.com/2p8avhwp</a>
+                <li><a href="https://tinyurl.com/2p8avhwp">
+                    <span class="icon">
+                      <svg role="img" class="file-minus-icon">
+                        <use xlink:href="#file-minus-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="label">https://tinyurl.com/2p8avhwp</span></a>
                 </li>
-                <li><a href="https://tinyurl.com/2d9dxs68"><span class="icon"></span>https://tinyurl.com/2d9dxs68</a>
+                <li><a href="https://tinyurl.com/2d9dxs68">
+                    <span class="icon">
+                      <svg role="img" class="file-minus-icon">
+                        <use xlink:href="#file-minus-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="label">https://tinyurl.com/2d9dxs68</span></a>
                 </li>
               </ul>
             </section>
@@ -94,8 +121,13 @@
                 are
                 available to connect with you. Please don't hesitate to reach out to us.</p>
               <ul class="links">
-                <li><a href="mailto:lovepropertycontact@gmail.com"><span
-                      class="icon"></span>lovepropertycontact@gmail.com</a>
+                <li><a href="mailto:lovepropertycontact@gmail.com">
+                    <span class="icon">
+                      <svg role="img" class="mail-icon">
+                        <use xlink:href="#mail-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="label">lovepropertycontact@gmail.com</span></a>
                 </li>
               </ul>
             </section>

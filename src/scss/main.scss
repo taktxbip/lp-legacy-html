@@ -2,6 +2,7 @@
 @import './config/variables';
 @import './config/fonts';
 
+
 $grid-breakpoints: (
   xs: 0,
   sm: $smallscreen,
@@ -24,6 +25,8 @@ $container-max-widths: (
 @import './config/mixins';
 // ui
 @import './ui/typography';
+@import './ui/category-card';
+@import './ui/simplebar';
 // layout
 @import './layout/global';
 @import './layout/svg';
