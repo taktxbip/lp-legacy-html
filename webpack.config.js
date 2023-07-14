@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 const fs = require('fs');
 const path = require('path');
 
@@ -16,17 +15,6 @@ module.exports = (env = {}, argv) => {
             isProd ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader'
         ];
-    };
-
-    const runShell = () => {
-        switch (process.platform) {
-            case 'darwin': return [
-                'cp public/index.php ./docs/index.php'
-            ];
-            default: return [
-                'cp public/index.php ./docs/index.php'
-            ];
-        }
     };
 
     const generateHtmlPlugins = (templateDir) => {
@@ -51,14 +39,6 @@ module.exports = (env = {}, argv) => {
             plugins.push(new MiniCssExtractPlugin({
                 filename: 'main.css'
             }));
-            plugins.push(
-                new WebpackShellPluginNext({
-                    onBuildEnd: {
-                        scripts: runShell(),
-                        blocking: false
-                    }
-                })
-            );
         }
         return plugins;
     };
