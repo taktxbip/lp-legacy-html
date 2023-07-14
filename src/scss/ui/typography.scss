@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: get('colors.neutral.400');
+  margin-top: 0;
+}
+
+// h1 {
+// font: 900 normal rem(50px) / 1.28 get('font.family');
+// }
+
+h2 {
+  font: 700 normal rem(22px) / 1.2 get('font.family');
+  color: get('colors.neutral.400');
+
+  a {
+    font: inherit;
+  }
+}
+
+h3 {
+  font: 900 normal rem(28px) / 1.29 get('font.family');
+}
+
+h6 {
+  font: 500 normal rem(18px) / 1.27 get('font.family');
+  margin-bottom: 4px;
+}
+
+p {
+  font: 400 normal rem(13px) / 1.4 get('font.family');
+  color: #040404;
+  margin-bottom: 20px;
+}

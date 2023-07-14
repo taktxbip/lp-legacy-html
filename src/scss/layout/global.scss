@@ -1,0 +1,253 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+  font-size: get('font.size');
+
+  @media all and (max-width: get('layout.responsive.smallscreen')) {
+    margin-top: 0 !important;
+
+    #wpadminbar {
+      display: none;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.overlayed {
+  #wrapper:after {
+    opacity: 1;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+
+.card {
+  margin-bottom: 20px;
+
+  &-image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 15px;
+  }
+
+  &-location {
+    font: 500 normal rem(16px) / 1.4 'Helvetica';
+    color: #000000;
+    margin-bottom: 15px;
+  }
+}
+
+.category-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid $lines;
+  margin-bottom: 20px;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  span {
+    font: 500 normal rem(18px)/ 1.2 'Helvetica';
+    font-style: normal;
+    color: #000000;
+  }
+}
+
+.bg {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  width: 100% !important;
+  height: 100% !important;
+
+  &-contain {
+    object-fit: contain;
+  }
+
+  &.mobile {
+    display: none;
+  }
+
+  &.desktop {
+    display: block;
+  }
+}
+
+.simplebar-track.simplebar-vertical {
+  background-color: get('colors.neutral.100');
+  width: 8px !important;
+  border-radius: get('borders.radius');
+}
+
+.fancybox-content {
+  &:hover {
+    cursor: default;
+  }
+}
+
+.simplebar-track {
+  &.simplebar-horizontal {
+    height: 8px !important;
+
+    @media all and (max-width: get('layout.responsive.smallscreen')) {
+      height: 6px !important;
+    }
+
+    .simplebar-scrollbar {
+      top: 0 !important;
+    }
+  }
+
+  .simplebar-scrollbar.simplebar-visible:before {
+    background-color: get('colors.neutral.200');
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.simplebar-scrollbar {
+  &:after {
+    content: "";
+    display: block;
+    background-color: get('colors.neutral.100');
+    height: 8px;
+    width: 500vw;
+    margin-left: -200vw;
+  }
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.readmore {
+  position: relative;
+  max-height: 92px;
+  overflow: hidden;
+  transition: get('transition');
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  &[aria-expanded=false]:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    display: block;
+    background: linear-gradient(0deg, #FFFFFF 15.07%, rgba(255, 255, 255, 0.3) 77.48%);
+    background-blend-mode: lighten;
+    width: 100%;
+    height: 40px;
+  }
+
+  &[aria-expanded=true]:after {
+    opacity: 0;
+  }
+
+  +.btn-third {
+    margin-top: 12px;
+  }
+}
+
+.dark-bg:before {
+  content: '';
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .35);
+  z-index: -1;
+}
+
+.white-bg:before {
+  content: '';
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: -1;
+}
+
+// smooth fade in on lazyload
+img[src="#"] {
+  opacity: 0;
+}
+
+img:not([src="#"]) {
+  -webkit-transition: opacity .5s linear 0.2s;
+  -moz-transition: opacity .5s linear 0.2s;
+  transition: opacity .5s linear 0.2s;
+  opacity: 1;
+}
+
+.global-page-title {
+  margin-top: 18px;
+
+  h1 {
+    font: 700 normal rem(22px) / 1.19 get('font.family');
+    letter-spacing: -1px;
+    color: #141A33;
+    margin: 0;
+    text-align: left;
+  }
+
+  p {
+    font: 400 normal rem(14px) / 1.4 get('font.family');
+    color: #555A6F;
+    margin: 10px 0 0;
+  }
+}
+
+
+p:empty {
+  display: none;
+}
+
+
+@media all and (max-width: get('layout.responsive.smallscreen')) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+#main hr:first-child {
+  display: none;
+}

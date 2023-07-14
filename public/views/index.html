@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZipKode</title>
+</head>
+
+<body>
+  <%= _.template(require('./../includes/svg.html').default)() %>
+
+    <%= _.template(require('./../includes/header.html').default)() %>
+
+      <div id="wrapper">
+
+        <div id="main">
+
+          <div class="container">
+            <section class="legacy-video">
+            </section>
+            <section class="legacy-message">
+              <p>So long, farewell. After making great strides over the past few years, we have made the difficult
+                decision
+                to
+                close our doors.</p>
+              <p>We are incredibly proud of what we built. We’ll miss using it ourselves.</p>
+              <p>Although we designed a business that customers absolutely love, it proved hard to scale into the
+                profitability
+                it needed to be sustainable.</p>
+              <p>While succeeding in one goal, we couldn’t make the other.</p>
+              <p>Thank you to everyone who has been a part of our journey.</p>
+            </section>
+            <h1>Slider 1</h1>
+
+            <section class="title">
+              <h2>Info</h2>
+              <p>Discover the story behind our company, explore useful links, and find contact details below.</p>
+            </section>
+
+            <section class="content">
+              <h2>Background</h2>
+              <p>Love Property, initially established in 2017 under the name "Realli," began as a platform dedicated to
+                advertising and selling new home developments. Though we enjoyed initial success, the unforeseen impact
+                of
+                COVID
+                and a decline in new home launches prompted a shift in our focus in 2020.</p>
+              <p>Embracing change, we rebranded to Love Property, adopting a fresh mission to curate and showcase the
+                finest
+                properties for both casual browsers and serious buyers. Throughout our journey, from Realli to Love
+                Property,
+                leveraging the power of social media and high-quality media content was our core focus."</p>
+            </section>
+
+            <section class="content">
+              <h2>Instagram Links</h2>
+              <p>Although our website is no longer available, Love Property lives on through our old Instagram accounts.
+              </p>
+              <p>You can explore a selection below.</p>
+              <h1>Accounts</h1>
+            </section>
+
+            <section class="content">
+              <h2>Our Product</h2>
+              <p>As a product-focused team, we were always committed to pushing the boundaries of user experience and
+                design.
+              </p>
+              <p>You can view the last iteration of our product, documented on Figma by clicking the link below.</p>
+              <ul class="links">
+                <li>
+                  <a href="https://tinyurl.com/jhs3ayn2"><span class="icon"></span>https://tinyurl.com/jhs3ayn2</a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="content">
+              <h2>In The News</h2>
+              <p>As a small company, it was always exciting for us to receive media coverage. We have included links
+                below
+                to
+                some of our favorite press features.</p>
+              <ul class="links">
+                <li><a href="https://tinyurl.com/2szzymfp"><span class="icon"></span>https://tinyurl.com/2szzymfp</a>
+                </li>
+                <li><a href="https://tinyurl.com/2p8avhwp"><span class="icon"></span>https://tinyurl.com/2p8avhwp</a>
+                </li>
+                <li><a href="https://tinyurl.com/2d9dxs68"><span class="icon"></span>https://tinyurl.com/2d9dxs68</a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="content">
+              <h2>Contact Us</h2>
+              <p>If you would like to learn more about Realli/Love Property or are interested in freelance projects, we
+                are
+                available to connect with you. Please don't hesitate to reach out to us.</p>
+              <ul class="links">
+                <li><a href="mailto:lovepropertycontact@gmail.com"><span
+                      class="icon"></span>lovepropertycontact@gmail.com</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <%= _.template(require('./../includes/footer.html').default)() %>
+
+        </div>
+      </div>
+</body>
+
+</html>

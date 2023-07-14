@@ -1,0 +1,30 @@
+.main-footer {
+  padding: 20px 0;
+  border-top: 4px solid #f5f7ff;
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-logo {
+    display: block;
+    max-width: 100px;
+    width: 100%;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  .ukraine {
+    max-width: 100px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

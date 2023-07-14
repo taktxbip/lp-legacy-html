@@ -1,0 +1,1 @@
+import '../images/ukraine.png';

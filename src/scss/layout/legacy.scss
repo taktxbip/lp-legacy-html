@@ -1,0 +1,25 @@
+.legacy-message {
+  margin-top: 60px;
+}
+
+.legacy-video {
+  margin-top: 30px;
+  background-color: #E3E3E3;
+  border-radius: 12px;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+}
+
+.links {
+  padding: 0;
+  list-style: none;
+
+  li {
+    a {
+      font: 400 normal rem(13px) / 1.4 var(--font-p);
+      color: #0E61AE;
+      text-decoration: underline;
+    }
+  }
+}
