@@ -21,10 +21,10 @@ module.exports = (env = {}, argv) => {
     const runShell = () => {
         switch (process.platform) {
             case 'darwin': return [
-                'cp public/index.php ./dist/index.php'
+                'cp public/index.php ./docs/index.php'
             ];
             default: return [
-                'cp public/index.php ./dist/index.php'
+                'cp public/index.php ./docs/index.php'
             ];
         }
     };
@@ -43,7 +43,7 @@ module.exports = (env = {}, argv) => {
 
     const getPlugins = () => {
         const plugins = [
-            // Remove dist folder
+            // Remove docs folder
             new CleanWebpackPlugin(),
             ...generateHtmlPlugins('./public/views')
         ];
@@ -67,7 +67,7 @@ module.exports = (env = {}, argv) => {
         mode: isProd ? 'production' : isDev && 'development',
         output: {
             filename: isProd ? 'main.js' : undefined,
-            path: path.resolve(__dirname, 'dist')
+            path: path.resolve(__dirname, 'docs')
         },
         module: {
             rules: [
