@@ -4,6 +4,10 @@
   pointer-events: none;
 }
 
+.simplebar-scrollbar {
+  position: absolute;
+}
+
 .simplebar-track {
   &.simplebar-horizontal {
     height: 8px !important;
@@ -17,13 +21,17 @@
     }
   }
 
-  .simplebar-scrollbar.simplebar-visible:before {
-    background-color: var(--neutral-200);
-    opacity: 1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  .simplebar-scrollbar.simplebar-visible {
+    background-color: red;
+
+    &:before {
+      background-color: var(--neutral-200);
+      opacity: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
@@ -35,9 +43,16 @@
     height: 8px;
     width: 500vw;
     margin-left: -200vw;
+    opacity: 1;
   }
 }
 
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
   height: 100%;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 8px !important;
+  // background-color: get('colors.neutral.100');
+  // border-radius: get('borders.radius');
 }

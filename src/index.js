@@ -4,6 +4,7 @@ window.jQuery = $;
 window.$ = $;
 
 import SimpleBar from 'simplebar';
+import 'simplebar/dist/simplebar.min.css';
 
 import './scss/main.scss';
 import './js/assets';

@@ -1,251 +1,291 @@
 .explore-categories {
-    margin-top: 18px;
-    h2 {
-        margin: 0;
-        color: get('colors.neutral.400');
-        a {
-            color: inherit;
-        }
+  margin-top: 10px;
+
+  h2 {
+    margin: 0;
+    color: get('colors.neutral.400');
+
+    a {
+      color: inherit;
     }
-    &-cards {
-        width: 100%;
+  }
+
+  &-cards {
+    width: 100%;
+  }
+
+  &-wraper {
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+    .subtitle-s1 {
+      font-size: rem(18px);
+      margin-bottom: 0;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      // @extend .category-underline;
     }
-    &-wraper {
-        margin: 0 -5px;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    &-title {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        margin-bottom: 0;
-        .subtitle-s1 {
-            font-size: rem(18px);
-            margin-bottom: 0;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            // @extend .category-underline;
-        }
-    }
-    .simplebar-vertical {
-        display: none;
-    }
-    .btn-outline {
-        margin-top: 10px;
-    }
+  }
+
+  .simplebar-vertical {
+    display: none;
+  }
+
+  .btn-outline {
+    margin-top: 10px;
+  }
 }
 
 .hr+.explore-categories {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .category-card {
+  position: relative;
+  width: 100%;
+  margin: 16px 12px 47px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-plate {
     position: relative;
+    height: 0;
     width: 100%;
-    margin: 16px 12px 47px;
-    &:hover {
-        cursor: pointer;
+    padding-bottom: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: get('colors.neutral.100');
+
+    img {
+      border-radius: 6px;
     }
-    &-plate {
-        position: relative;
-        height: 0;
-        width: 100%;
-        padding-bottom: 100%;
-        border-radius: 12px;
-        overflow: hidden;
-        background-color: get('colors.neutral.100');
-        img {
-            border-radius: 6px;
-        }
+  }
+
+  &-logo {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    bottom: 18px;
+    left: 20px;
+    overflow: hidden;
+
+    img {
+      border-radius: 50%;
     }
-    &-logo {
-        border-radius: 50%;
-        position: absolute;
-        background-color: #fff;
-        width: 50px;
-        height: 50px;
-        z-index: 1;
-        bottom: 18px;
-        left: 20px;
-        overflow: hidden;
-        img {
-            border-radius: 50%;
-        }
+  }
+
+  &-descr {
+    font: 700 normal rem(38px) / 1.1 get('font.family');
+    color: #fff;
+    position: absolute;
+    top: 18%;
+    left: 9%;
+    right: 9%;
+    bottom: 60px;
+    z-index: 1;
+    // max-height: calc(34px * 4);
+    overflow: hidden;
+
+    @media all and (min-width: get('layout.responsive.smallscreen')) {
+      // max-height: calc(52px * 4);
+      font-size: 52px;
     }
-    &-descr {
-        font: 700 normal rem(38px) / 1.1 get('font.family');
-        color: #fff;
-        position: absolute;
-        top: 18%;
-        left: 9%;
-        right: 9%;
-        bottom: 60px;
-        z-index: 1;
-        // max-height: calc(34px * 4);
-        overflow: hidden;
-        @media all and (min-width: get('layout.responsive.smallscreen')) {
-            // max-height: calc(52px * 4);
-            font-size: 52px;
-        }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    >div:first-child {
+      width: calc(100% - 52px);
     }
-    &-actions {
+
+    .the_champ_login_container {
+      .theChampLogin {
+        border-radius: 4px;
+        height: 42px;
+        width: 42px;
         display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-        >div:first-child {
-            width: calc(100% - 52px);
+        border: 2px solid #000;
+
+        &:hover {
+          cursor: pointer;
         }
-        .the_champ_login_container {
-            .theChampLogin {
-                border-radius: 4px;
-                height: 42px;
-                width: 42px;
-                display: flex;
-                border: 2px solid #000;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            .champ_subscribe {
-                margin: auto;
-                display: flex;
-                i {
-                    font: 400 normal rem(14px) / 1.27 get('font.family');
-                }
-            }
+      }
+
+      .champ_subscribe {
+        margin: auto;
+        display: flex;
+
+        i {
+          font: 400 normal rem(14px) / 1.27 get('font.family');
         }
-        .instagram {
-            display: flex;
-            align-items: center;
-            flex: 1 0 auto;
-            justify-content: center;
-            margin-right: 10px;
-            &-icon {
-                margin: 0 10px 0 0;
-            }
-        }
-        .btn-user-subscribe {
-            width: calc(100% - 56px);
-        }
+      }
     }
-    .account-logo-circle {
-        position: absolute;
-        bottom: 9%;
-        left: 9%;
-        height: 46px;
-        width: 46px;
-        border-width: 2.4px;
-        font-size: rem(7px);
-        @media all and (min-width: get('layout.responsive.smallscreen')) {
-            height: 70px;
-            width: 70px;
-            font-size: rem(11px);
-        }
+
+    .instagram {
+      display: flex;
+      align-items: center;
+      flex: 1 0 auto;
+      justify-content: center;
+      margin-right: 10px;
+
+      &-icon {
+        margin: 0 10px 0 0;
+      }
     }
+
+    .btn-user-subscribe {
+      width: calc(100% - 56px);
+    }
+  }
+
+  .account-logo-circle {
+    position: absolute;
+    bottom: 9%;
+    left: 9%;
+    height: 46px;
+    width: 46px;
+    border-width: 2.4px;
+    font-size: rem(7px);
+
+    @media all and (min-width: get('layout.responsive.smallscreen')) {
+      height: 70px;
+      width: 70px;
+      font-size: rem(11px);
+    }
+  }
 }
 
 .category-card-small {
-    margin: 10px 5px 24px;
-    &-wrapper {
-        display: block;
-        background-color: olive;
-        padding: 18px 12px;
-        border-radius: 12px;
-        text-decoration: none;
-        position: relative;
-        &:hover {
-            cursor: pointer;
-        }
+  margin: 10px 5px 24px;
+
+  &-wrapper {
+    display: block;
+    background-color: olive;
+    padding: 18px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
     }
+  }
 }
 
 .account-logo-circle {
-    overflow: hidden;
+  overflow: hidden;
+  text-decoration: none;
+  border: 3.4px solid #fff;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  font-size: rem(11px);
+
+  &:hover {
     text-decoration: none;
-    border: 3.4px solid #fff;
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    display: flex;
-    position: relative;
-    z-index: 1;
-    font-size: rem(11px);
-    &:hover {
-        text-decoration: none;
-    }
-    &-label {
-        letter-spacing: -0.3px;
-        margin: auto;
-        font-size: inherit;
-        line-height: 1;
-        font-weight: 500;
-        text-transform: uppercase;
-        color: #fff;
-        text-align: center;
-    }
-    svg {
-        position: absolute;
-    }
-    .account-logo-smile {
-        position: absolute;
-    }
-    &-svg {
-        width: 35%;
-        height: 0;
-        position: absolute;
-        padding-bottom: 12%;
-        bottom: 15%;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-    }
+  }
+
+  &-label {
+    letter-spacing: -0.3px;
+    margin: auto;
+    font-size: inherit;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  .account-logo-smile {
+    position: absolute;
+  }
+
+  &-svg {
+    width: 35%;
+    height: 0;
+    position: absolute;
+    padding-bottom: 12%;
+    bottom: 15%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
 }
 
 .account-logo-smile {
-    width: 100%;
-    height: 100%;
-    // width: 24px;
-    // height: 8px;
-    fill: red;
+  width: 100%;
+  height: 100%;
+  // width: 24px;
+  // height: 8px;
+  fill: red;
 }
 
 .page-template-template-categories-list {
-    .category-card {
-        margin: 0 0 18px;
-        height: unset;
-        .btn-user-subscribe {
-            padding: 0 24px;
-            width: calc(100% - 56px);
-            height: 44px;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            >* {
-                margin: auto;
-            }
-            .icon-subscribe {
-                margin-right: 10px;
-            }
-            span {
-                margin-left: 0;
-                @media all and (max-width: get('layout.responsive.smallscreen')) {
-                    display: block;
-                }
-            }
+  .category-card {
+    margin: 0 0 18px;
+    height: unset;
+
+    .btn-user-subscribe {
+      padding: 0 24px;
+      width: calc(100% - 56px);
+      height: 44px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+      >* {
+        margin: auto;
+      }
+
+      .icon-subscribe {
+        margin-right: 10px;
+      }
+
+      span {
+        margin-left: 0;
+
+        @media all and (max-width: get('layout.responsive.smallscreen')) {
+          display: block;
         }
+      }
     }
-    #main {
-        // padding-bottom: 20px;
-    }
+  }
+
+  #main {
+    // padding-bottom: 20px;
+  }
 }
 
 .our-lists-list {
-    margin-top: 18px;
-    .container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: -18px;
-    }
+  margin-top: 18px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -18px;
+  }
 }
