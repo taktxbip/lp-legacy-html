@@ -4,3 +4,4 @@ import '../images/BOI.png';
 import '../images/EI.png';
 import '../images/kellysan.png';
 import '../images/sky.png';
+import '../images/favicon-32x32.png';
