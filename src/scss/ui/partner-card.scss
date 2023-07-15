@@ -1,0 +1,27 @@
+.explore-partners {
+  margin-top: 40px;
+}
+
+.partner-card {
+  margin: 0 12px 22px;
+  height: 90px;
+  padding: 0 77px;
+  border: 1px solid #CCD0E9;
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+
+  img {
+    border-radius: 5px;
+    display: block;
+  }
+
+  &:first-child {
+    margin-left: 5px;
+  }
+}
+
+.explore-categories-partners {
+  margin: 0;
+}

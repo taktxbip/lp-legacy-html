@@ -12,6 +12,7 @@ import './js/assets';
 (function () {
   window.addEventListener('DOMContentLoaded', () => {
     activateBlockScroll('.explore-categories', '.explore-categories-cards');
+    activateBlockScroll('.explore-partners', '.explore-partners-cards');
   });
 
 })();
@@ -28,12 +29,9 @@ const activateBlockScroll = (block, scrollWrapper) => {
 function initSimpleBar(element) {
   $(element).each(function () {
     const current = $(this).get(0);
-    const simpleBarElement = new SimpleBar(current, {
+    new SimpleBar(current, {
       autoHide: false,
       forceVisible: true
     });
-    if (element.hasClass('listing-cards')) {
-      listingScrollEvent(simpleBarElement);
-    }
   });
 }
