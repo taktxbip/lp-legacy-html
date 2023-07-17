@@ -49,6 +49,22 @@ section.content {
   p:last-child {
     margin-bottom: 0;
   }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      font: 300 normal rem(13px) / 1.4 var(--font-p);
+      color: #040404;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 
