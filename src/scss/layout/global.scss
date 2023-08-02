@@ -4,7 +4,7 @@ html {
   -ms-overflow-style: scrollbar;
   font-size: get('font.size');
 
-  @media all and (max-width: get('layout.responsive.smallscreen')) {
+  @media screen and (max-width: $smallscreen) {
     margin-top: 0 !important;
 
     #wpadminbar {
@@ -104,9 +104,33 @@ p:empty {
   display: none;
 }
 
-@media all and (max-width: get('layout.responsive.smallscreen')) {
+@media all and (max-width: $smallscreen) {
   .container {
     padding-left: 18px;
     padding-right: 18px;
+  }
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.simplebar-scrollable-y {
+  @media screen and (max-width: $smallscreen) {
+    margin-left: -17px;
+    margin-right: -17px;
+    width: unset;
+
+    .explore-categories-wraper {
+      >*:first-child {
+        margin-left: 45px;
+      }
+
+    }
   }
 }

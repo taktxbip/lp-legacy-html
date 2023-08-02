@@ -1,12 +1,28 @@
 .main-footer {
-  margin-top: 60px;
-  padding: 20px 0;
-  border-top: 4px solid #f5f7ff;
+  padding-top: 1px;
+  background-color: #F5F5F7;
+  height: 207px;
+
+  @media screen and (max-width: $smallscreen) {
+    height: 152px;
+  }
+
+  hr {
+    margin: 40px 0 0;
+    height: 4px;
+    border: none;
+    background-color: #E3E3E3;
+  }
 
   .wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 45px;
+
+    @media screen and (max-width: $smallscreen) {
+      margin-top: 16px;
+    }
   }
 
   .site-logo {
